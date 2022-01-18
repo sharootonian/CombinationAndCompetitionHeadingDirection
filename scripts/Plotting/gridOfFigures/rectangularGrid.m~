@@ -1,0 +1,16 @@
+function ax = rectangularGrid(Nx, Ny, dh, dw, wg1, wgEnd, hg1, hgEnd)
+
+
+Nx = 4;
+Ny = 6;
+
+dh = 0.01;
+dw = 0.03;
+
+hg = ones(Ny+1,1)*dh;
+wg = ones(Nx+1,1)*dw;
+
+hb = (ones(Ny, 1)-sum(hg))/Ny;
+wb = (ones(Nx, 1)-sum(wg))/Nx;
+
+ax = gridOfEqualFigures(hb, wb, hg, wg);
