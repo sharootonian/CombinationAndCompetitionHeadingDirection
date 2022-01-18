@@ -1,7 +1,9 @@
-clear
-%
+% Code for Combination and competition between path integration and landmark navigation in the estimation of heading direction
+% Authors: Robert C. Wilson & Sevan K. Harootonian
+% 2021
 %% directories
 addpath([pwd,'/data'])
+addpath(genpath([pwd,'/scripts']))
 datadir = '/data/';
 figdir= '';
 %% default plot parameters
