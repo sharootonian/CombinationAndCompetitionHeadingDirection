@@ -207,12 +207,13 @@ set(ax(2), 'xticklabel', [])
 axes(ax(1)); hold on;
 Y = BIC - repmat(BIC(:,4), [1 4]);
 r = (rand(size(Y,1),1)-0.5)*0.2;
-plot([0.5 4.5], [0 0], 'k')
 for i = 1:4
     plot(r+i, Y(:,i)','o', 'markersize', 8, 'color', AZred);
 end
+hold on
+yline(10)
 
-plot([0.5 4.5], [10 10], 'k--')
+plot([0.5 4.5], [0 0], 'k--')
 set(gca, 'view', [90 90], 'xtick', 1:4, 'xticklabel', model_name, ...
     'xlim', [0.5 4.5], 'ylim', [-200 600])
 set(ax, ...
